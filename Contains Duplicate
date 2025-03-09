@@ -1,0 +1,17 @@
+//optimized solution of contains duplicate using hashset
+// time complexity O(n)
+// space complexity O(n)
+
+public class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        Set<Integer> seen = new HashSet<>();
+        for(int num: nums){
+            if(seen.contains(num)){
+                return true;
+            }
+            seen.add(num);
+        }
+        return false;
+ 
+    }
+} 
